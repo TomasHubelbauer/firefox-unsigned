@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Tomas Hubelbauer",
+  "version": "0.0.0.0",
+  "description": "A Firefox extension with my custom scripts",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "extension.js"
+      ]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tomas@hubelbauer.net",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  }
+}

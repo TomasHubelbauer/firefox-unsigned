@@ -1,0 +1,14 @@
+jwtIssuer.ts
+jwtSecret.ts
+extension.js
+temp.js
+
+# AMO
+.amo-upload-uuid
+web-ext-artifacts
+
+# Bun
+bun.lock
+
+# NPM
+node_modules
