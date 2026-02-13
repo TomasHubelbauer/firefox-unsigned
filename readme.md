@@ -11,11 +11,11 @@ https://github.com/TomasHubelbauer/firefox-permanent-unsigned-extension
 0. Bootstrap your extension's source code in this repository, for my use-case I
    added these features here:
    - Print message on all pages to indicate the extension is active on them:
-     > Tomas Hubelbauer extension is running…
+     > Tomas Hubelbauer extension v######### is running…
    - Clean Hacker News comments from noisy commenters / on noisy topics
+   - Clean Hacker News posts from uninteresting domains
 
-   Use `void import` in `extension.ts` to apply select scripts on per-domain
-   basis (note that TLA is not supported in Firefox web extensions).
+   Use imports in `extension.ts` to apply select scripts on per-domain basis.
 
    Use `bun temp ….ts` to build the JavaScript counterpart of the TypeScript
    file with self-call usable for quick testing in the browser developer tools
@@ -37,8 +37,6 @@ https://github.com/TomasHubelbauer/firefox-permanent-unsigned-extension
 
 4. Install https://github.com/mozilla/web-ext: `bun add -g web-ext`
 5. Run `bun install` and then `bun .` and wait for the output (~1-10 minutes):
-
-   Note that this will bump the major version in `extension/manifest.json`.
 
    ```
    Building web extension from ./firefox-unsigned
